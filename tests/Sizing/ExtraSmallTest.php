@@ -2,13 +2,13 @@
 
 namespace Tests\Sizing;
 
-use Tests\BaseTestCase;
 use ClothingSorter\Sizing\ExtraSmall;
+use Tests\BaseTestCase;
 
 class ExtraSmallTest extends BaseTestCase
 {
-    /** 
-     * @test 
+    /**
+     * @test
      */
     public function it_matches_size_variations()
     {
@@ -22,7 +22,7 @@ class ExtraSmallTest extends BaseTestCase
     public function it_returns_expected_index()
     {
         $size = new ExtraSmall();
-        $this->assertEquals(1, $size->index()); 
+        $this->assertEquals(1, $size->index());
     }
 
     /**
@@ -33,5 +33,4 @@ class ExtraSmallTest extends BaseTestCase
         $size = new ExtraSmall();
         $this->assertEquals('XS', $size->abbrev());
     }
-
 }

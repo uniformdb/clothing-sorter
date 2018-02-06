@@ -2,15 +2,14 @@
 
 namespace Tests;
 
-use Tests\BaseTestCase;
 use ClothingSorter\SizingSorter;
 
 class SizingSorterTest extends BaseTestCase
 {
-    /** 
-     * @test 
+    /**
+     * @test
      * @expectedException ClothingSorter\Exception\InvalidSizeException
-    */
+     */
     public function it_throws_invalid_size_exception_when_we_pass_an_unknown_size()
     {
         $sizing = (new SizingSorter('XLSJDF'))->make();
@@ -24,5 +23,4 @@ class SizingSorterTest extends BaseTestCase
         $sizing = (new SizingSorter('XS'))->make();
         $this->assertInstanceOf('ClothingSorter\Sizing\ExtraSmall', $sizing);
     }
-    
 }
