@@ -4,17 +4,16 @@ namespace ClothingSorter\Sizing;
 
 abstract class Sizing
 {
-
     /**
      * Returns true when the size matches the current sizing.
-     * 
-     * @return boolean
+     *
+     * @return bool
      */
     abstract public function matches($size);
 
     /**
-     * Returns the abbreviation
-     * 
+     * Returns the abbreviation.
+     *
      * @return string
      */
     public function abbrev()
@@ -24,12 +23,11 @@ abstract class Sizing
 
     /**
      * Returns the numerical index for the sizing.
-     * 
+     *
      * @return int
      */
     public function index()
     {
         return $this->index;
     }
-
 }
