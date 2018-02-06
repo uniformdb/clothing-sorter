@@ -1,0 +1,20 @@
+{
+    "name": "uniformdb/clothing-sorter",
+    "description": "A PHP library for sorting clothing such as shirts, jeans, and shoes. Used by https://uniformdb.com.",
+    "authors": [
+        {
+            "name": "Grant Copley",
+            "email": "grant@uniformdb.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "ClothingSorter\\": "src/",
+            "Tests\\": "tests/"
+        }
+    }
+}
