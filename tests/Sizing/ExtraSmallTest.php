@@ -6,9 +6,8 @@ use ClothingSorter\Sizing\ExtraSmall;
 
 class ExtraSmallTest extends SizingTestCase
 {
-
     /**
-     * Mapping to sizing class for SizingTestCase tests
+     * Mapping to sizing class for SizingTestCase tests.
      */
     protected $sizing = ExtraSmall::class;
 
@@ -34,5 +33,4 @@ class ExtraSmallTest extends SizingTestCase
         $size = new ExtraSmall();
         $this->assertEquals('XS', $size->abbrev());
     }
-
 }
