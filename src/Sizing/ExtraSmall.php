@@ -4,20 +4,29 @@ namespace ClothingSorter\Sizing;
 
 class ExtraSmall extends Sizing
 {
+    /**
+     * The abbreviation for extra small.
+     * 
+     * @var string
+     */
     protected $abbrev = 'XS';
+
+
+    /**
+     * The index for extra small.
+     * 
+     * @var int
+     */
     protected $index = 1;
 
     /**
-     * Returns true when the size matches the current sizing.
-     *
-     * @return bool
+     * The matching rules for extra small.
+     * 
+     * @var array
      */
-    public function matches($size)
-    {
-        if ($size === 'XS') {
-            return true;
-        }
+    protected $rules = [
+        '/^XS/',
+        '/XS$/'
+    ];
 
-        return false;
-    }
 }
