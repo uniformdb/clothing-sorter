@@ -37,8 +37,6 @@ abstract class Sizing
             }
         }
 
-
         return false;
     }
-
 }

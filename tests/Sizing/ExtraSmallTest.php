@@ -15,7 +15,7 @@ class ExtraSmallTest extends BaseTestCase
         foreach ($this->extraSmallVariations() as $variation) {
             $extraSmall = new ExtraSmall();
             $this->assertTrue($extraSmall->matches($variation), 'Unable to match with variation '.$variation);
-        } 
+        }
     }
 
     /**
@@ -24,11 +24,10 @@ class ExtraSmallTest extends BaseTestCase
     public function it_matches_size_variations_that_are_all_lowercase()
     {
         foreach ($this->extraSmallVariations() as $variation) {
-
             $lowerCaseVariation = strtolower($variation);
 
             $extraSmall = new ExtraSmall();
-            $this->assertTrue($extraSmall->matches($lowerCaseVariation), 'Unable to match with variation ' . $lowerCaseVariation);
+            $this->assertTrue($extraSmall->matches($lowerCaseVariation), 'Unable to match with variation '.$lowerCaseVariation);
         }
     }
 
@@ -52,6 +51,6 @@ class ExtraSmallTest extends BaseTestCase
 
     private function extraSmallVariations()
     {
-        return require(dirname(__FILE__) . '/../data/extra_small_variations.php');
+        return require dirname(__FILE__).'/../data/extra_small_variations.php';
     }
 }
