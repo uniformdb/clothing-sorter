@@ -3,34 +3,19 @@
 namespace Tests\Sizing;
 
 use ClothingSorter\Sizing\ExtraSmall;
-use Tests\BaseTestCase;
 
-class ExtraSmallTest extends BaseTestCase
+class ExtraSmallTest extends SizingTestCase
 {
-    /**
-     * @test
-     */
-    public function it_matches_size_variations()
-    {
-        foreach ($this->extraSmallVariations() as $variation) {
-            $extraSmall = new ExtraSmall();
-            $this->assertTrue($extraSmall->matches($variation), 'Unable to match with variation '.$variation);
-        } 
-    }
 
     /**
-     * @test
+     * Mapping to sizing class for SizingTestCase tests
      */
-    public function it_matches_size_variations_that_are_all_lowercase()
-    {
-        foreach ($this->extraSmallVariations() as $variation) {
+    protected $sizing = ExtraSmall::class;
 
-            $lowerCaseVariation = strtolower($variation);
-
-            $extraSmall = new ExtraSmall();
-            $this->assertTrue($extraSmall->matches($lowerCaseVariation), 'Unable to match with variation ' . $lowerCaseVariation);
-        }
-    }
+    /**
+     * File containing variations of the size extra small to test.
+     */
+    protected $variationsFile = '/../data/extra_small_variations.php';
 
     /**
      * @test
@@ -50,8 +35,4 @@ class ExtraSmallTest extends BaseTestCase
         $this->assertEquals('XS', $size->abbrev());
     }
 
-    private function extraSmallVariations()
-    {
-        return require(dirname(__FILE__) . '/../data/extra_small_variations.php');
-    }
 }

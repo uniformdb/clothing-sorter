@@ -11,7 +11,6 @@ class ExtraSmall extends Sizing
      */
     protected $abbrev = 'XS';
 
-
     /**
      * The index for extra small.
      * 
