@@ -5,21 +5,21 @@ namespace ClothingSorter\Sizing;
 class Small extends Sizing
 {
     /**
-     * The abbreviation for extra small.
+     * The abbreviation for small.
      *
      * @var string
      */
     protected $abbrev = 'S';
 
     /**
-     * The index for extra small.
+     * The index for small.
      *
      * @var int
      */
     protected $index = 2;
 
     /**
-     * The matching rules for extra small.
+     * The matching rules for small.
      *
      * @var array
      */
