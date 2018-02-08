@@ -5,7 +5,7 @@ namespace ClothingSorter\Sizing;
 class Medium extends Sizing
 {
     /**
-     * The abbreviation for medium.
+     * The standard abbreviation for medium.
      *
      * @var string
      */

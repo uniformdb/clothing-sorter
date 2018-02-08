@@ -5,7 +5,7 @@ namespace ClothingSorter\Sizing;
 class ExtraSmall extends Sizing
 {
     /**
-     * The abbreviation for extra small.
+     * The standard abbreviation for extra small.
      *
      * @var string
      */
